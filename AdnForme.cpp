@@ -1,33 +1,40 @@
 #include "AdnForme.h"
 
 // Génère les fichiers c.jo
-void genereFichierJo(char c)
+void genereFichierJo(int piste)
 {
-    int mesamplifront[16]; //son du n, la référence
-    int mesdurerfront[16]; //son du n, la référence
-    int mesvarampli[16]; //son du n, la référence
-    int mesvardurer[16]; //son du n, la référence
+    int quelpiano;
+    int quelpiano1;
+    int mesamplifront[12]; //son du n, la référence
+    int mesdurerfront[12]; //son du n, la référence
+    int mesvarampli[12]; //son du n, la référence
+    int mesvardurer[12]; //son du n, la référence
     int madurer; //son du n, la référence
     int maforceh;
     int maforceb;
     int montremolo;
     int maforceplus;
     int macombiendezonememoire;
+
+  char adnlu[32];
+  snprintf(adnlu, 32, "piste%d.txt", piste);
+
+
    FILE* fichierdesfronts = NULL; 
-    fichierdesfronts = fopen("fronts.txt", "r"); 
+    fichierdesfronts = fopen(adnlu, "r"); 
     if (fichierdesfronts != NULL)
     {
-        fscanf(fichierdesfronts, "%d %d %d %d %d %d %d %d %d %d %d %d %d %d", &mesamplifront[0], &mesamplifront[1], &mesdurerfront[0], &mesdurerfront[1], &mesvarampli[0], &mesvarampli[1], &mesvardurer[0], &mesvardurer[1], &madurer, &maforceh, &maforceb, &montremolo, &maforceplus, &macombiendezonememoire);
+        fscanf(fichierdesfronts, "%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d", &quelpiano, &quelpiano1,&mesamplifront[0], &mesamplifront[1], &mesdurerfront[0], &mesdurerfront[1], &mesvarampli[0], &mesvarampli[1], &mesvardurer[0], &mesvardurer[1], &madurer, &maforceh, &maforceb, &montremolo, &maforceplus, &macombiendezonememoire);
         fclose(fichierdesfronts);
     }
+
 /**********************************************/
- jo joc = mesjo[c-'a'];
   // Nom du fichier jo
   char nomfichierjo[32];
-  snprintf(nomfichierjo, 32, "%c.jo", c);
+  snprintf(nomfichierjo, 32, "%d.jo", piste);
   // Fichier jo
   FILE* fichierjo;
-  if (!(fichierjo = fopen(nomfichierjo, "wb")))
+  if (!(fichierjo = fopen(nomfichierjo, "ab")))
    {
     exit(-1);
    }
@@ -36,7 +43,7 @@ void genereFichierJo(char c)
 
 // ici commence la zone de travail pour l'apprenant
 
-maforceh += ((joc.rapportvingtsix ) * 0.01);
+
 
 int tablex[250]= {120, 60, 40, 30, 24, 20, 17, 15, 13, 12, 11, 10, 9, 9, 8, 8, 7, 7, 6, 6, 6, 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 int calculpossible = tablex[maforceh-1];
@@ -48,8 +55,8 @@ double pourmacom4 = (madurer * 0.01);
 double pourmacom5 = (maforceplus * 0.1);
 double pourmacom6 = (macombiendezonememoire * 0.01);
 
-mesdurerfront[0] = int(mesdurerfront[0] * (joc.devingtsixaun ) * 0.01 * pourmacom5);
-mesdurerfront[1] = int(mesdurerfront[1] * (joc.devingtsixaun ) * 0.01 * pourmacom5);
+mesdurerfront[0] = int(mesdurerfront[0] * 0.01 * pourmacom5);
+mesdurerfront[1] = int(mesdurerfront[1] * 0.01 * pourmacom5);
 
 int variance1 = int(calculpossible * pourmacom);
 if (variance1<1)
