@@ -193,73 +193,281 @@ MonMix::MonMix() : QWidget()
 
 void MonMix::ouvrirCompose1()
 {
-system("xdg-open piste.txt");
+system("xdg-open piste1.txt");
 }
 void MonMix::ouvrirCompose2()
 {
-system("xdg-open piste1.txt");
+system("xdg-open piste2.txt");
 }
 void MonMix::ouvrirCompose3()
 {
-system("xdg-open piste2.txt");
+system("xdg-open piste3.txt");
 }
 void MonMix::ouvrirCompose4()
 {
-system("xdg-open piste3.txt");
+system("xdg-open piste4.txt");
 }
 void MonMix::ouvrirCompose5()
 {
-system("xdg-open piste4.txt");
+system("xdg-open piste5.txt");
 }
 void MonMix::ouvrirCompose6()
 {
-system("xdg-open piste5.txt");
+system("xdg-open piste6.txt");
 }
 void MonMix::ouvrirCompose7()
 {
-system("xdg-open piste6.txt");
+system("xdg-open piste7.txt");
 }
 void MonMix::ouvrirCompose8()
 {
-system("xdg-open piste7.txt");
+system("xdg-open piste8.txt");
 }
 void MonMix::ouvrirCompose9()
 {
-system("xdg-open piste8.txt");
+system("xdg-open piste9.txt");
 }
 void MonMix::ouvrirCompose10()
 {
-system("xdg-open piste9.txt");
+system("xdg-open piste10.txt");
 }
 void MonMix::ouvrirCompose11()
 {
-system("xdg-open piste10.txt");
+system("xdg-open piste11.txt");
 }
 void MonMix::ouvrirCompose12()
 {
-system("xdg-open piste11.txt");
+system("xdg-open piste12.txt");
 }
 void MonMix::ouvrirCompose13()
 {
-system("xdg-open piste12.txt");
+system("xdg-open piste13.txt");
 }
 void MonMix::ouvrirCompose14()
 {
-system("xdg-open piste13.txt");
+system("xdg-open piste14.txt");
 }
 void MonMix::ouvrirCompose15()
 {
-system("xdg-open piste14.txt");
+system("xdg-open piste15.txt");
 }
 void MonMix::ouvrirCompose16()
 {
-system("xdg-open piste15.txt");
+system("xdg-open piste16.txt");
 }
 
 
 void MonMix::ouvrirMix1()
 {
-system("./synthe piste.txt");
+    int quelpiano;
+    int quelpiano1;
+    int quelpiano2;
+    int quelpiano3;
+    int quelpiano4;
+    int quelpiano5;
+    int quelpiano6;
+    int quelpiano7;
+    int quelpiano8;
+    int quelpiano9;
+    int quelpiano10;
+    int quelpiano11;
+    int quelpiano12;
+    int quelpiano13;
+    int quelpiano14;
+    int quelpiano15;
+	int piste = 1;
+   FILE* ouvrepiste = NULL; 
+    ouvrepiste = fopen("piste1.txt", "r"); 
+    if (ouvrepiste != NULL)
+    {
+
+while ( fscanf(ouvrepiste,"%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d", &quelpiano, &quelpiano1, &quelpiano2, &quelpiano3, &quelpiano4, &quelpiano5, &quelpiano6, &quelpiano7, &quelpiano8, &quelpiano9, &quelpiano10, &quelpiano11, &quelpiano12, &quelpiano13, &quelpiano14, &quelpiano15)!=EOF )
+{
+
+     switch (quelpiano) {
+
+case 1 :
+
+      genereFichierJo (piste);
+//      conversionJoWav;
+ break;
+ /*
+case 2 :
+      genereFichierJo1(c);
+      conversionJoWav(c,n);
+ break;
+case 3 :
+      genereFichierJo2(c);
+      conversionJoWav(c,n);
+ break;
+case 4 :
+      genereFichierJo3(c);
+      conversionJoWav(c,n);
+ break;
+case 5 :
+      genereFichierJo4(c);
+      conversionJoWav(c,n);
+ break;
+case 6 :
+      genereFichierJo5(c);
+      conversionJoWav(c,n);
+ break;
+case 7 :
+      genereFichierJo6(c);
+      conversionJoWav(c,n);
+ break;
+case 8 :
+      genereFichierJo7(c);
+      conversionJoWav(c,n);
+ break;
+case 9 :
+      genereFichierJo8(c);
+      conversionJoWav(c,n);
+
+ break;
+case 10 :
+      genereFichierJo9(c);
+      conversionJoWav(c,n);
+ break;
+case 11 :
+      genereFichierJo10(c);
+      conversionJoWav(c,n);
+ break;
+
+case 12 :
+      genereFichierJo11(c);
+      conversionJoWav(c,n);
+ break;
+case 13 :
+      genereFichierJo12(c);
+      conversionJoWav(c,n);
+ break;
+case 14 :
+      genereFichierJo13(c);
+      conversionJoWav(c,n);
+ break;
+case 15 :
+      genereFichierJo14(c);
+      conversionJoWav(c,n);
+ break;
+case 16 :
+      genereFichierJo15(c);
+      conversionJoWav(c,n);
+ break;
+case 17 :
+      genereFichierJo16(c);
+      conversionJoWav(c,n);
+ break;
+case 18 :
+      genereFichierJo17(c);
+      conversionJoWav(c,n);
+ break;
+case 19 :
+      genereFichierJo18(c);
+      conversionJoWav(c,n);
+ break;
+case 20 :
+      genereFichierJo19(c);
+      conversionJoWav(c,n);
+ break;
+case 21 :
+      genereFichierJo20(c);
+      conversionJoWav(c,n);
+ break;
+case 22 :
+      genereFichierJo21(c);
+      conversionJoWav(c,n);
+ break;
+case 23 :
+      genereFichierJo22(c);
+      conversionJoWav(c,n);
+ break;
+case 24 :
+      genereFichierJo23(c);
+      conversionJoWav(c,n);
+ break;
+case 25 :
+      genereFichierJo24(c);
+      conversionJoWav(c,n);
+ break;
+case 26 :
+      genereFichierJo25(c);
+      conversionJoWav(c,n);
+ break;
+case 27 :
+      genereFichierJo26(c);
+      conversionJoWav(c,n);
+ break;
+case 28 :
+      genereFichierJo27(c);
+      conversionJoWav(c,n);
+ break;
+case 29 :
+      genereFichierJo28(c);
+      conversionJoWav(c,n);
+
+ break;
+case 30 :
+      genereFichierJo29(c);
+      conversionJoWav(c,n);
+ break;
+case 31 :
+      genereFichierJo30(c);
+      conversionJoWav(c,n);
+ break;
+
+case 32 :
+      genereFichierJo31(c);
+      conversionJoWav(c,n);
+ break;
+case 33 :
+      genereFichierJo32(c);
+      conversionJoWav(c,n);
+ break;
+case 34 :
+      genereFichierJo33(c);
+      conversionJoWav(c,n);
+ break;
+case 35 :
+      genereFichierJo34(c);
+      conversionJoWav(c,n);
+ break;
+case 36 :
+      genereFichierJo35(c);
+      conversionJoWav(c,n);
+ break;
+case 37 :
+      genereFichierJo36(c);
+      conversionJoWav(c,n);
+ break;
+case 38 :
+      genereFichierJo37(c);
+      conversionJoWav(c,n);
+ break;
+case 39 :
+      genereFichierJo38(c);
+      conversionJoWav(c,n);
+ break;
+case 40 :
+      genereFichierJo39(c);
+      conversionJoWav(c,n);
+ break;
+case 41 :
+      genereFichierJo40(c);
+      conversionJoWav(c,n);
+ break;
+*/
+default: 
+
+      genereFichierJo(piste);
+//      conversionJoWav();
+
+}
+}
+        fclose(ouvrepiste);
+    }
+     
+//system("./synthe piste.txt");
 }
 void MonMix::ouvrirMix2()
 {
