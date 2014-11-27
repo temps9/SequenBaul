@@ -6,6 +6,8 @@
 #include <iostream>
 #include <iostream>
 #include <QObject>
+#include "convertisseur.h"
+#include "AdnForme.h"
 using namespace std;
 class MonMix : public QWidget
 {
