@@ -18,9 +18,13 @@ MonMix::MonMix() : QWidget()
 /*
     setFixedSize(1000, 800);
 */
-    aa_bouton = new QPushButton("ON OFF", this);
+    aa_bouton = new QPushButton("OFF", this);
     aa_bouton->setFont(QFont("Comic Sans MS", 10));
-    aa_bouton->setGeometry(920, 2, 80, 20);
+    aa_bouton->setGeometry(920, 2, 50, 20);
+    
+    ab_bouton = new QPushButton("RM", this);
+    ab_bouton->setFont(QFont("Comic Sans MS", 10));
+    ab_bouton->setGeometry(820, 2, 50, 20);
 
     ba_bouton = new QPushButton("Compose piste 1", this);
     ba_bouton->setFont(QFont("Comic Sans MS", 14));
@@ -185,6 +189,9 @@ MonMix::MonMix() : QWidget()
     QObject::connect(cd_bouton, SIGNAL(clicked()), this, SLOT(ouvrirMix14()));
     QObject::connect(ce_bouton, SIGNAL(clicked()), this, SLOT(ouvrirMix15()));
     QObject::connect(cf_bouton, SIGNAL(clicked()), this, SLOT(ouvrirMix16()));
+    
+    QObject::connect (aa_bouton, SIGNAL (clicked()), qApp, SLOT (quit ()));
+    QObject::connect(ab_bouton, SIGNAL(clicked()), this, SLOT(effaceMix16()));
 
 
 }
@@ -256,6 +263,10 @@ void MonMix::ouvrirCompose16()
 system("xdg-open piste16.txt");
 }
 
+void MonMix::effaceMix16()
+{
+system("rm *.jo");
+}
 
 void MonMix::ouvrirMix1()
 {
@@ -287,142 +298,144 @@ while ( fscanf(ouvrepiste,"%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d", &qu
      switch (quelpiano) {
 
 case 1 :
-      genereFichierJo (piste);
+      genereFichierJo(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
- /*
 case 2 :
-      genereFichierJo (piste);
+      genereFichierJo1(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 3 :
-      genereFichierJo2(piste);
+      genereFichierJo2(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 4 :
-      genereFichierJo3(piste);
+      genereFichierJo3(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 5 :
-      genereFichierJo4(piste);
+      genereFichierJo4(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 6 :
-      genereFichierJo5(piste);
+      genereFichierJo5(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 7 :
-      genereFichierJo6(piste);
+      genereFichierJo6(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 8 :
-      genereFichierJo7(piste);
+      genereFichierJo7(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
+
 case 9 :
-      genereFichierJo8(piste);
+      genereFichierJo8(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 10 :
-      genereFichierJo9(piste);
+      genereFichierJo9(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 11 :
-      genereFichierJo10(piste);
+      genereFichierJo10(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 12 :
-      genereFichierJo11(piste);
+      genereFichierJo11(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 13 :
-      genereFichierJo12(piste);
+      genereFichierJo12(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 14 :
-      genereFichierJo13(piste);
+      genereFichierJo13(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 15 :
-      genereFichierJo14(piste);
+      genereFichierJo14(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 16 :
-      genereFichierJo15(piste);
+      genereFichierJo15(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 17 :
-      genereFichierJo16(piste);
+      genereFichierJo16(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 18 :
-      genereFichierJo17(piste);
+      genereFichierJo17(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 19 :
-      genereFichierJo18(piste);
+      genereFichierJo18(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 20 :
-      genereFichierJo19(piste);
+      genereFichierJo19(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 21 :
-      genereFichierJo20(piste);
+      genereFichierJo20(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 22 :
-      genereFichierJo21(piste);
+      genereFichierJo21(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 23 :
-      genereFichierJo22(piste);
+      genereFichierJo22(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 24 :
-      genereFichierJo23(piste);
+      genereFichierJo23(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 25 :
-      genereFichierJo24(piste);
+      genereFichierJo24(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 26 :
-      genereFichierJo25(piste);
+      genereFichierJo25(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 27 :
-      genereFichierJo26(piste);
+      genereFichierJo26(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 28 :
-      genereFichierJo27(piste);
+      genereFichierJo27(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 29 :
-      genereFichierJo28(piste);
-      conversionJoWav (piste);
-
+      genereFichierJo28(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 30 :
-      genereFichierJo29(piste);
+      genereFichierJo29(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 31 :
-      genereFichierJo30(piste);
+      genereFichierJo30(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 
 case 32 :
-      genereFichierJo31(piste);
+      genereFichierJo31(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 33 :
-      genereFichierJo32(piste);
+      genereFichierJo32(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 34 :
-      genereFichierJo33(piste);
+      genereFichierJo33(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 35 :
-      genereFichierJo34(piste);
+      genereFichierJo34(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 36 :
-      genereFichierJo35(piste);
+      genereFichierJo35(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 37 :
-      genereFichierJo36(piste);
+      genereFichierJo36(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 38 :
-      genereFichierJo37(piste);
+      genereFichierJo37(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 39 :
-      genereFichierJo38(piste);
+      genereFichierJo38(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 40 :
-      genereFichierJo39(piste);
+      genereFichierJo39(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
 case 41 :
-      genereFichierJo40(piste);
+      genereFichierJo40(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
  break;
-*/
+case 42 :
+      genereFichierJo41(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
+ break;
+
+
 default: 
-      genereFichierJo(piste);
+      genereFichierJo(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
 }
       conversionJoWav (piste);
 }
         fclose(ouvrepiste);
     }
      
-//system("./synthe piste.txt");
+system("play 1.wav");
 }
 void MonMix::ouvrirMix2()
 {
