@@ -287,182 +287,137 @@ while ( fscanf(ouvrepiste,"%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d", &qu
      switch (quelpiano) {
 
 case 1 :
-
       genereFichierJo (piste);
-//      conversionJoWav;
  break;
  /*
 case 2 :
-      genereFichierJo1(c);
-      conversionJoWav(c,n);
+      genereFichierJo (piste);
  break;
 case 3 :
-      genereFichierJo2(c);
-      conversionJoWav(c,n);
+      genereFichierJo2(piste);
  break;
 case 4 :
-      genereFichierJo3(c);
-      conversionJoWav(c,n);
+      genereFichierJo3(piste);
  break;
 case 5 :
-      genereFichierJo4(c);
-      conversionJoWav(c,n);
+      genereFichierJo4(piste);
  break;
 case 6 :
-      genereFichierJo5(c);
-      conversionJoWav(c,n);
+      genereFichierJo5(piste);
  break;
 case 7 :
-      genereFichierJo6(c);
-      conversionJoWav(c,n);
+      genereFichierJo6(piste);
  break;
 case 8 :
-      genereFichierJo7(c);
-      conversionJoWav(c,n);
+      genereFichierJo7(piste);
  break;
 case 9 :
-      genereFichierJo8(c);
-      conversionJoWav(c,n);
-
+      genereFichierJo8(piste);
  break;
 case 10 :
-      genereFichierJo9(c);
-      conversionJoWav(c,n);
+      genereFichierJo9(piste);
  break;
 case 11 :
-      genereFichierJo10(c);
-      conversionJoWav(c,n);
+      genereFichierJo10(piste);
  break;
-
 case 12 :
-      genereFichierJo11(c);
-      conversionJoWav(c,n);
+      genereFichierJo11(piste);
  break;
 case 13 :
-      genereFichierJo12(c);
-      conversionJoWav(c,n);
+      genereFichierJo12(piste);
  break;
 case 14 :
-      genereFichierJo13(c);
-      conversionJoWav(c,n);
+      genereFichierJo13(piste);
  break;
 case 15 :
-      genereFichierJo14(c);
-      conversionJoWav(c,n);
+      genereFichierJo14(piste);
  break;
 case 16 :
-      genereFichierJo15(c);
-      conversionJoWav(c,n);
+      genereFichierJo15(piste);
  break;
 case 17 :
-      genereFichierJo16(c);
-      conversionJoWav(c,n);
+      genereFichierJo16(piste);
  break;
 case 18 :
-      genereFichierJo17(c);
-      conversionJoWav(c,n);
+      genereFichierJo17(piste);
  break;
 case 19 :
-      genereFichierJo18(c);
-      conversionJoWav(c,n);
+      genereFichierJo18(piste);
  break;
 case 20 :
-      genereFichierJo19(c);
-      conversionJoWav(c,n);
+      genereFichierJo19(piste);
  break;
 case 21 :
-      genereFichierJo20(c);
-      conversionJoWav(c,n);
+      genereFichierJo20(piste);
  break;
 case 22 :
-      genereFichierJo21(c);
-      conversionJoWav(c,n);
+      genereFichierJo21(piste);
  break;
 case 23 :
-      genereFichierJo22(c);
-      conversionJoWav(c,n);
+      genereFichierJo22(piste);
  break;
 case 24 :
-      genereFichierJo23(c);
-      conversionJoWav(c,n);
+      genereFichierJo23(piste);
  break;
 case 25 :
-      genereFichierJo24(c);
-      conversionJoWav(c,n);
+      genereFichierJo24(piste);
  break;
 case 26 :
-      genereFichierJo25(c);
-      conversionJoWav(c,n);
+      genereFichierJo25(piste);
  break;
 case 27 :
-      genereFichierJo26(c);
-      conversionJoWav(c,n);
+      genereFichierJo26(piste);
  break;
 case 28 :
-      genereFichierJo27(c);
-      conversionJoWav(c,n);
+      genereFichierJo27(piste);
  break;
 case 29 :
-      genereFichierJo28(c);
-      conversionJoWav(c,n);
+      genereFichierJo28(piste);
+      conversionJoWav (piste);
 
  break;
 case 30 :
-      genereFichierJo29(c);
-      conversionJoWav(c,n);
+      genereFichierJo29(piste);
  break;
 case 31 :
-      genereFichierJo30(c);
-      conversionJoWav(c,n);
+      genereFichierJo30(piste);
  break;
 
 case 32 :
-      genereFichierJo31(c);
-      conversionJoWav(c,n);
+      genereFichierJo31(piste);
  break;
 case 33 :
-      genereFichierJo32(c);
-      conversionJoWav(c,n);
+      genereFichierJo32(piste);
  break;
 case 34 :
-      genereFichierJo33(c);
-      conversionJoWav(c,n);
+      genereFichierJo33(piste);
  break;
 case 35 :
-      genereFichierJo34(c);
-      conversionJoWav(c,n);
+      genereFichierJo34(piste);
  break;
 case 36 :
-      genereFichierJo35(c);
-      conversionJoWav(c,n);
+      genereFichierJo35(piste);
  break;
 case 37 :
-      genereFichierJo36(c);
-      conversionJoWav(c,n);
+      genereFichierJo36(piste);
  break;
 case 38 :
-      genereFichierJo37(c);
-      conversionJoWav(c,n);
+      genereFichierJo37(piste);
  break;
 case 39 :
-      genereFichierJo38(c);
-      conversionJoWav(c,n);
+      genereFichierJo38(piste);
  break;
 case 40 :
-      genereFichierJo39(c);
-      conversionJoWav(c,n);
+      genereFichierJo39(piste);
  break;
 case 41 :
-      genereFichierJo40(c);
-      conversionJoWav(c,n);
+      genereFichierJo40(piste);
  break;
 */
 default: 
-
       genereFichierJo(piste);
-//      conversionJoWav();
-
 }
+      conversionJoWav (piste);
 }
         fclose(ouvrepiste);
     }
