@@ -1,10 +1,9 @@
 #include "AdnForme.h"
 
-// Génère les fichiers c.jo
-void genereFichierJo(int piste)
+// Génère les fichiers piste.jo
+void genereFichierJo(int piste,int quelpiano2,int quelpiano3,int quelpiano4,int quelpiano5,int quelpiano6,int quelpiano7,int quelpiano8,int quelpiano9,int quelpiano10,int quelpiano11,int quelpiano12,int quelpiano13,int quelpiano14,int quelpiano15)
 {
-    int quelpiano;
-    int quelpiano1;
+
     int mesamplifront[12]; //son du n, la référence
     int mesdurerfront[12]; //son du n, la référence
     int mesvarampli[12]; //son du n, la référence
@@ -16,19 +15,21 @@ void genereFichierJo(int piste)
     int maforceplus;
     int macombiendezonememoire;
 
-  char adnlu[32];
-  snprintf(adnlu, 32, "piste%d.txt", piste);
+mesamplifront[0] = quelpiano2;
+mesamplifront[1] = quelpiano3;
+mesdurerfront[0] = quelpiano4;
+mesdurerfront[1] = quelpiano5;
+mesvarampli[0] = quelpiano6;
+mesvarampli[1] = quelpiano7;
+mesvardurer[0] = quelpiano8;
+mesvardurer[1] = quelpiano9;
+madurer = quelpiano10;
+maforceh = quelpiano11;
+maforceb = quelpiano12;
+montremolo = quelpiano13;
+maforceplus = quelpiano14;
+macombiendezonememoire = quelpiano15;
 
-
-   FILE* fichierdesfronts = NULL; 
-    fichierdesfronts = fopen(adnlu, "r"); 
-    if (fichierdesfronts != NULL)
-    {
-        fscanf(fichierdesfronts, "%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d", &quelpiano, &quelpiano1,&mesamplifront[0], &mesamplifront[1], &mesdurerfront[0], &mesdurerfront[1], &mesvarampli[0], &mesvarampli[1], &mesvardurer[0], &mesvardurer[1], &madurer, &maforceh, &maforceb, &montremolo, &maforceplus, &macombiendezonememoire);
-        fclose(fichierdesfronts);
-    }
-
-/**********************************************/
   // Nom du fichier jo
   char nomfichierjo[32];
   snprintf(nomfichierjo, 32, "%d.jo", piste);
@@ -38,9 +39,6 @@ void genereFichierJo(int piste)
    {
     exit(-1);
    }
-
-
-
 // ici commence la zone de travail pour l'apprenant
 
 
