@@ -3,10 +3,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "jo.h"
-#include "fronts.h"
 
-void genereFichierJo4(char c);
-void conversionJoWav(char c, int n);
+void genereFichierJo4(int piste);
+void conversionJoWav();
 
 #endif // _AdnForme4_h_
