@@ -5,6 +5,6 @@
 #include <stdlib.h>
 
 void genereFichierJo(int piste);
-void conversionJoWav();
+void conversionJoWav(int piste);
 
 #endif // _AdnForme_h_
