@@ -8,6 +8,13 @@
 #include <QObject>
 #include "convertisseur.h"
 #include "AdnForme.h"
+/*#include "AdnForme1.h"
+#include "AdnForme2.h"
+#include "AdnForme3.h"
+#include "AdnForme4.h"
+#include "AdnForme5.h"
+#include "AdnForme6.h"
+#include "AdnForme7.h"*/
 using namespace std;
 class MonMix : public QWidget
 {
@@ -17,6 +24,7 @@ public:
 MonMix();
 private:
 QPushButton *aa_bouton;
+QPushButton *ab_bouton;
 QPushButton *ba_bouton;
 QPushButton *bb_bouton;
 QPushButton *bc_bouton;
@@ -83,6 +91,7 @@ void ouvrirMix13();
 void ouvrirMix14();
 void ouvrirMix15();
 void ouvrirMix16();
+void effaceMix16();
 
 
 };
