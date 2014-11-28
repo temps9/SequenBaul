@@ -45,7 +45,8 @@ main.cpp \
     AdnForme38.cpp \
     AdnForme39.cpp \
     AdnForme40.cpp \
-    AdnForme41.cpp
+    AdnForme41.cpp \
+    pourleger.cpp
 
 HEADERS += \
     MonMix.h \
@@ -91,4 +92,5 @@ HEADERS += \
     AdnForme38.h \
     AdnForme39.h \
     AdnForme40.h \
-    AdnForme41.h
+    AdnForme41.h \
+    pourleger.h
