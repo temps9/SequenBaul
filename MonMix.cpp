@@ -13,6 +13,8 @@ using namespace std;
 
 #include <QApplication>
 
+int piste = 1;
+
 MonMix::MonMix() : QWidget()
 {
 /*
@@ -270,230 +272,144 @@ system("rm *.jo");
 
 void MonMix::ouvrirMix1()
 {
-    int quelpiano;
-    int quelpiano1;
-    int quelpiano2;
-    int quelpiano3;
-    int quelpiano4;
-    int quelpiano5;
-    int quelpiano6;
-    int quelpiano7;
-    int quelpiano8;
-    int quelpiano9;
-    int quelpiano10;
-    int quelpiano11;
-    int quelpiano12;
-    int quelpiano13;
-    int quelpiano14;
-    int quelpiano15;
-	int piste = 1;
-   FILE* ouvrepiste = NULL; 
-    ouvrepiste = fopen("piste1.txt", "r"); 
-    if (ouvrepiste != NULL)
-    {
-
-while ( fscanf(ouvrepiste,"%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d", &quelpiano, &quelpiano1, &quelpiano2, &quelpiano3, &quelpiano4, &quelpiano5, &quelpiano6, &quelpiano7, &quelpiano8, &quelpiano9, &quelpiano10, &quelpiano11, &quelpiano12, &quelpiano13, &quelpiano14, &quelpiano15)!=EOF )
-{
-
-     switch (quelpiano) {
-
-case 1 :
-      genereFichierJo(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 2 :
-      genereFichierJo1(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 3 :
-      genereFichierJo2(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 4 :
-      genereFichierJo3(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 5 :
-      genereFichierJo4(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 6 :
-      genereFichierJo5(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 7 :
-      genereFichierJo6(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 8 :
-      genereFichierJo7(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-
-case 9 :
-      genereFichierJo8(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 10 :
-      genereFichierJo9(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 11 :
-      genereFichierJo10(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 12 :
-      genereFichierJo11(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 13 :
-      genereFichierJo12(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 14 :
-      genereFichierJo13(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 15 :
-      genereFichierJo14(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 16 :
-      genereFichierJo15(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 17 :
-      genereFichierJo16(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 18 :
-      genereFichierJo17(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 19 :
-      genereFichierJo18(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 20 :
-      genereFichierJo19(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 21 :
-      genereFichierJo20(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 22 :
-      genereFichierJo21(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 23 :
-      genereFichierJo22(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 24 :
-      genereFichierJo23(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 25 :
-      genereFichierJo24(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 26 :
-      genereFichierJo25(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 27 :
-      genereFichierJo26(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 28 :
-      genereFichierJo27(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 29 :
-      genereFichierJo28(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 30 :
-      genereFichierJo29(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 31 :
-      genereFichierJo30(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-
-case 32 :
-      genereFichierJo31(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 33 :
-      genereFichierJo32(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 34 :
-      genereFichierJo33(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 35 :
-      genereFichierJo34(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 36 :
-      genereFichierJo35(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 37 :
-      genereFichierJo36(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 38 :
-      genereFichierJo37(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 39 :
-      genereFichierJo38(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 40 :
-      genereFichierJo39(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 41 :
-      genereFichierJo40(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-case 42 :
-      genereFichierJo41(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
- break;
-
-
-default: 
-      genereFichierJo(piste, quelpiano2, quelpiano3, quelpiano4, quelpiano5, quelpiano6, quelpiano7, quelpiano8, quelpiano9, quelpiano10, quelpiano11, quelpiano12, quelpiano13, quelpiano14, quelpiano15);
-}
-      conversionJoWav (piste);
-}
-        fclose(ouvrepiste);
-    }
-     
+piste = 1;
+monMixleger(piste); 
 system("play 1.wav");
 }
 void MonMix::ouvrirMix2()
 {
-system("./synthemix1 piste.txt && ./synthemix2 piste1.txt && sox -m joris1.wav joris2.wav mixed.wav  && play mixed.wav");
+      for(int i=1; i<3; i++)
+       {
+piste = i;
+monMixleger(piste);
+	}    
+
+system("sox -m 1.wav 2.wav mixed.wav && play mixed.wav");
 }
 void MonMix::ouvrirMix3()
 {
-system("./synthemix1 piste.txt && ./synthemix2 piste1.txt && ./synthemix3 piste2.txt && sox -m joris1.wav joris2.wav joris3.wav mixed.wav  && play mixed.wav");
+      for(int i=1; i<4; i++)
+       {
+piste = i;
+monMixleger(piste);
+	}
+system("sox -m 1.wav 2.wav 3.wav mixed.wav && play mixed.wav");
 }
+
 void MonMix::ouvrirMix4()
 {
-system("./synthemix1 piste.txt && ./synthemix2 piste1.txt && ./synthemix3 piste2.txt && ./synthemix4 piste3.txt && sox -m joris1.wav joris2.wav joris3.wav joris4.wav mixed.wav && play mixed.wav");
+      for(int i=1; i<5; i++)
+       {
+piste = i;
+monMixleger(piste);
+	}
+system("sox -m 1.wav 2.wav 3.wav 4.wav mixed.wav && play mixed.wav");
 }
 void MonMix::ouvrirMix5()
 {
-system("./synthemix1 piste.txt && ./synthemix2 piste1.txt && ./synthemix3 piste2.txt && ./synthemix4 piste3.txt && ./synthemix5 piste4.txt && sox -m joris1.wav joris2.wav joris3.wav joris4.wav joris5.wav mixed.wav  && play mixed.wav");
+      for(int i=1; i<6; i++)
+       {
+piste = i;
+monMixleger(piste);
+	}
+system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav mixed.wav && play mixed.wav");
 }
 void MonMix::ouvrirMix6()
 {
-system("./synthemix1 piste.txt && ./synthemix2 piste1.txt && ./synthemix3 piste2.txt && ./synthemix4 piste3.txt && ./synthemix5 piste4.txt && ./synthemix6 piste5.txt && sox -m joris1.wav joris2.wav joris3.wav joris4.wav joris5.wav joris6.wav mixed.wav  && play mixed.wav");
+      for(int i=1; i<7; i++)
+       {
+piste = i;
+monMixleger(piste);
+	}
+system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav mixed.wav && play mixed.wav");
 }
 void MonMix::ouvrirMix7()
 {
-system("./synthemix1 piste.txt && ./synthemix2 piste1.txt && ./synthemix3 piste2.txt && ./synthemix4 piste3.txt && ./synthemix5 piste4.txt && ./synthemix6 piste5.txt && ./synthemix7 piste6.txt && sox -m joris1.wav joris2.wav joris3.wav joris4.wav joris5.wav joris6.wav joris7.wav mixed.wav  && play mixed.wav");
+      for(int i=1; i<8; i++)
+       {
+piste = i;
+monMixleger(piste);
+	}
+system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav mixed.wav && play mixed.wav");
 }
 void MonMix::ouvrirMix8()
 {
-system("./synthemix1 piste.txt && ./synthemix2 piste1.txt && ./synthemix3 piste2.txt && ./synthemix4 piste3.txt && ./synthemix5 piste4.txt && ./synthemix6 piste5.txt && ./synthemix7 piste6.txt && ./synthemix8 piste7.txt && sox -m joris1.wav joris2.wav joris3.wav joris4.wav joris5.wav joris6.wav joris7.wav joris8.wav mixed.wav  && play mixed.wav");
+      for(int i=1; i<9; i++)
+       {
+piste = i;
+monMixleger(piste);
+	}
+system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav mixed.wav && play mixed.wav");
 }
 void MonMix::ouvrirMix9()
 {
-system("./synthemix1 piste.txt && ./synthemix2 piste1.txt && ./synthemix3 piste2.txt && ./synthemix4 piste3.txt && ./synthemix5 piste4.txt && ./synthemix6 piste5.txt && ./synthemix7 piste6.txt && ./synthemix8 piste7.txt && ./synthemix9 piste8.txt && sox -m joris1.wav joris2.wav joris3.wav joris4.wav joris5.wav joris6.wav joris7.wav joris8.wav joris9.wav mixed.wav  && play mixed.wav");
+      for(int i=1; i<10; i++)
+       {
+piste = i;
+monMixleger(piste);
+	}
+system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav mixed.wav && play mixed.wav");
 }
 void MonMix::ouvrirMix10()
 {
-system("./synthemix1 piste.txt && ./synthemix2 piste1.txt && ./synthemix3 piste2.txt && ./synthemix4 piste3.txt && ./synthemix5 piste4.txt && ./synthemix6 piste5.txt && ./synthemix7 piste6.txt && ./synthemix8 piste7.txt && ./synthemix9 piste8.txt && ./synthemix10 piste9.txt && sox -m joris1.wav joris2.wav joris3.wav joris4.wav joris5.wav joris6.wav joris7.wav joris8.wav joris9.wav joris10.wav mixed.wav  && play mixed.wav");
+      for(int i=1; i<11; i++)
+       {
+piste = i;
+monMixleger(piste);
+	}
+system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav mixed.wav && play mixed.wav");
 }
 void MonMix::ouvrirMix11()
 {
-system("./synthemix1 piste.txt && ./synthemix2 piste1.txt && ./synthemix3 piste2.txt && ./synthemix4 piste3.txt && ./synthemix5 piste4.txt && ./synthemix6 piste5.txt && ./synthemix7 piste6.txt && ./synthemix8 piste7.txt && ./synthemix9 piste8.txt && ./synthemix10 piste9.txt && ./synthemix11 piste10.txt && sox -m joris1.wav joris2.wav joris3.wav joris4.wav joris5.wav joris6.wav joris7.wav joris8.wav joris9.wav joris10.wav joris11.wav mixed.wav  && play mixed.wav");
+      for(int i=1; i<12; i++)
+       {
+piste = i;
+monMixleger(piste);
+	}
+system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav mixed.wav && play mixed.wav");
 }
 void MonMix::ouvrirMix12()
 {
-system("./synthemix1 piste.txt && ./synthemix2 piste1.txt && ./synthemix3 piste2.txt && ./synthemix4 piste3.txt && ./synthemix5 piste4.txt && ./synthemix6 piste5.txt && ./synthemix7 piste6.txt && ./synthemix8 piste7.txt && ./synthemix9 piste8.txt && ./synthemix10 piste9.txt && ./synthemix11 piste10.txt && ./synthemix12 piste11.txt && sox -m joris1.wav joris2.wav joris3.wav joris4.wav joris5.wav joris6.wav joris7.wav joris8.wav joris9.wav joris10.wav joris11.wav joris12.wav mixed.wav  && play mixed.wav");
+      for(int i=1; i<13; i++)
+       {
+piste = i;
+monMixleger(piste);
+	}
+system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav mixed.wav && play mixed.wav");
 }
 void MonMix::ouvrirMix13()
 {
-system("./synthemix1 piste.txt && ./synthemix2 piste1.txt && ./synthemix3 piste2.txt && ./synthemix4 piste3.txt && ./synthemix5 piste4.txt && ./synthemix6 piste5.txt && ./synthemix7 piste6.txt && ./synthemix8 piste7.txt && ./synthemix9 piste8.txt && ./synthemix10 piste9.txt && ./synthemix11 piste10.txt && ./synthemix12 piste11.txt && ./synthemix13 piste12.txt && sox -m joris1.wav joris2.wav joris3.wav joris4.wav joris5.wav joris6.wav joris7.wav joris8.wav joris9.wav joris10.wav joris11.wav joris12.wav joris13.wav mixed.wav  && play mixed.wav");
+      for(int i=1; i<14; i++)
+       {
+piste = i;
+monMixleger(piste);
+	}
+system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav 13.wav mixed.wav && play mixed.wav");
 }
 void MonMix::ouvrirMix14()
 {
-system("./synthemix1 piste.txt && ./synthemix2 piste1.txt && ./synthemix3 piste2.txt && ./synthemix4 piste3.txt && ./synthemix5 piste4.txt && ./synthemix6 piste5.txt && ./synthemix7 piste6.txt && ./synthemix8 piste7.txt && ./synthemix9 piste8.txt && ./synthemix10 piste9.txt && ./synthemix11 piste10.txt && ./synthemix12 piste11.txt && ./synthemix13 piste12.txt && ./synthemix14 piste13.txt && sox -m joris1.wav joris2.wav joris3.wav joris4.wav joris5.wav joris6.wav joris7.wav joris8.wav joris9.wav joris10.wav joris11.wav joris12.wav joris13.wav joris14.wav mixed.wav  && play mixed.wav");
+      for(int i=1; i<15; i++)
+       {
+piste = i;
+monMixleger(piste);
+	}
+system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav 13.wav 14.wav mixed.wav && play mixed.wav");
 }
 void MonMix::ouvrirMix15()
 {
-system("./synthemix1 piste.txt && ./synthemix2 piste1.txt && ./synthemix3 piste2.txt && ./synthemix4 piste3.txt && ./synthemix5 piste4.txt && ./synthemix6 piste5.txt && ./synthemix7 piste6.txt && ./synthemix8 piste7.txt && ./synthemix9 piste8.txt && ./synthemix10 piste9.txt && ./synthemix11 piste10.txt && ./synthemix12 piste11.txt && ./synthemix13 piste12.txt && ./synthemix14 piste13.txt && ./synthemix15 piste14.txt && sox -m joris1.wav joris2.wav joris3.wav joris4.wav joris5.wav joris6.wav joris7.wav joris8.wav joris9.wav joris10.wav joris11.wav joris12.wav joris13.wav joris14.wav joris15.wav mixed.wav  && play mixed.wav");
+      for(int i=1; i<16; i++)
+       {
+piste = i;
+monMixleger(piste);
+	}
+system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav 13.wav 14.wav 15.wav mixed.wav && play mixed.wav");
 }
 void MonMix::ouvrirMix16()
 {
-system("./synthemix1 piste.txt && ./synthemix2 piste1.txt && ./synthemix3 piste2.txt && ./synthemix4 piste3.txt && ./synthemix5 piste4.txt && ./synthemix6 piste5.txt && ./synthemix7 piste6.txt && ./synthemix8 piste7.txt && ./synthemix9 piste8.txt && ./synthemix10 piste9.txt && ./synthemix11 piste10.txt && ./synthemix12 piste11.txt && ./synthemix13 piste12.txt && ./synthemix14 piste13.txt && ./synthemix15 piste14.txt && ./synthemix16 piste15.txt && sox -m joris1.wav joris2.wav joris3.wav joris4.wav joris5.wav joris6.wav joris7.wav joris8.wav joris9.wav joris10.wav joris11.wav joris12.wav joris13.wav joris14.wav joris15.wav joris16.wav mixed.wav  && play mixed.wav");
+      for(int i=1; i<17; i++)
+       {
+piste = i;
+monMixleger(piste);
+	}
+system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav 13.wav 14.wav 15.wav 16.wav mixed.wav && play mixed.wav");
 }
