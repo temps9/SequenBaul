@@ -8,6 +8,7 @@
 #include <QObject>
 #include "convertisseur.h"
 #include "AdnForme.h"
+#include "pourleger.h"
 /*#include "AdnForme1.h"
 #include "AdnForme2.h"
 #include "AdnForme3.h"
