@@ -133,10 +133,16 @@
 
 #define NumDeTab 128
 
+  // Nom du fichier piste
+  char awav[32];
+
+  
+    // Nom du fichier piste
+  char ajo[32];
 
 
-char awav[] = {"1.wav"};
-char ajo[] = {"1.jo"};
+//char awav[] = {"1.wav"};
+//char ajo[] = {"1.jo"};
 
 		  double codebash;
 // Calcule le nombre de points du fichier jo fichierjo
@@ -221,6 +227,10 @@ static void enteteFichierWave(FILE* fichierwav, FILE* fichierjo)
 // Conversion d'un fichier piste.jo en un fichier piste.wav
 void conversionJoWav(int piste)
 {
+
+  snprintf(awav, 32, "%d.wav", piste);
+    snprintf(ajo, 32, "%d.jo", piste);
+
   // Nom du fichier wave cn.wav
   char nomfichierwav[32];
   snprintf(nomfichierwav, 32, "%d.wav", piste);
@@ -250,33 +260,7 @@ void conversionJoWav(int piste)
   // Écritude de l'en-tête du fichier .wav
   enteteFichierWave(fichierwav,fichierjo);
   rewind(fichierjo);
-/* char voilou;
-voilou = '1';
-     switch (n)
-	{
-	case 1:
-voilou = '1';
 
-	  break;
-	case 2:
-voilou = '2';
-	  break;
-	case 3:
-voilou = '3';
-	  break;
-	case 4:
-voilou = '4';
-	  break;
-	case 5:
-voilou = '5';
-	  break;
-	}
-
-
-     awav[0]= piste;
-//	 awav[1]= voilou;
-     ajo[0]= piste;
-*/
   fclose(fichierjo);
   fclose(fichierwav);
   // Table magique de conversion
@@ -1655,5 +1639,4 @@ fprintf(temps,"%d ", (int)codebash );
 //  fclose(fichierjo);
 //  fclose(fichierwav);
 }
-
 
