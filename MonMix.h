@@ -6,6 +6,9 @@
 #include <iostream>
 #include <iostream>
 #include <QObject>
+#include <sys/types.h>
+#include <signal.h>
+#include <unistd.h>
 #include "convertisseur.h"
 #include "AdnForme.h"
 #include "pourleger.h"
