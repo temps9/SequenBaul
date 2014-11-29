@@ -272,9 +272,17 @@ system("rm *.jo");
 
 void MonMix::ouvrirMix1()
 {
+ab_bouton->setEnabled(false);
 piste = 1;
 monMixleger(piste); 
-system("play 1.wav");
+  if(!fork())
+   {
+//system("play 1.wav");
+    execlp("sox", "sox", "1.wav", "-d", NULL);
+    perror("Ceci ne devrait pas arriver.");
+    exit(-1);
+   }
+ab_bouton->setEnabled(true);
 }
 void MonMix::ouvrirMix2()
 {
