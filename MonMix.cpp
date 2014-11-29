@@ -291,8 +291,14 @@ void MonMix::ouvrirMix2()
 piste = i;
 monMixleger(piste);
 	}    
+system("sox -m 1.wav 2.wav mixed.wav");
 
-system("sox -m 1.wav 2.wav mixed.wav && play mixed.wav");
+  if(!fork())
+   {
+    execlp("sox", "sox", "mixed.wav", "-d", NULL);
+    perror("Ceci ne devrait pas arriver.");
+    exit(-1);
+   }
 }
 void MonMix::ouvrirMix3()
 {
@@ -301,7 +307,13 @@ void MonMix::ouvrirMix3()
 piste = i;
 monMixleger(piste);
 	}
-system("sox -m 1.wav 2.wav 3.wav mixed.wav && play mixed.wav");
+system("sox -m 1.wav 2.wav 3.wav mixed.wav");
+  if(!fork())
+   {
+    execlp("sox", "sox", "mixed.wav", "-d", NULL);
+    perror("Ceci ne devrait pas arriver.");
+    exit(-1);
+   }
 }
 
 void MonMix::ouvrirMix4()
@@ -311,7 +323,13 @@ void MonMix::ouvrirMix4()
 piste = i;
 monMixleger(piste);
 	}
-system("sox -m 1.wav 2.wav 3.wav 4.wav mixed.wav && play mixed.wav");
+system("sox -m 1.wav 2.wav 3.wav 4.wav mixed.wav");
+  if(!fork())
+   {
+    execlp("sox", "sox", "mixed.wav", "-d", NULL);
+    perror("Ceci ne devrait pas arriver.");
+    exit(-1);
+   }
 }
 void MonMix::ouvrirMix5()
 {
@@ -320,7 +338,13 @@ void MonMix::ouvrirMix5()
 piste = i;
 monMixleger(piste);
 	}
-system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav mixed.wav && play mixed.wav");
+system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav mixed.wav");
+  if(!fork())
+   {
+    execlp("sox", "sox", "mixed.wav", "-d", NULL);
+    perror("Ceci ne devrait pas arriver.");
+    exit(-1);
+   }
 }
 void MonMix::ouvrirMix6()
 {
@@ -329,7 +353,13 @@ void MonMix::ouvrirMix6()
 piste = i;
 monMixleger(piste);
 	}
-system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav mixed.wav && play mixed.wav");
+system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav mixed.wav");
+  if(!fork())
+   {
+    execlp("sox", "sox", "mixed.wav", "-d", NULL);
+    perror("Ceci ne devrait pas arriver.");
+    exit(-1);
+   }
 }
 void MonMix::ouvrirMix7()
 {
@@ -338,7 +368,13 @@ void MonMix::ouvrirMix7()
 piste = i;
 monMixleger(piste);
 	}
-system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav mixed.wav && play mixed.wav");
+system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav mixed.wav");
+  if(!fork())
+   {
+    execlp("sox", "sox", "mixed.wav", "-d", NULL);
+    perror("Ceci ne devrait pas arriver.");
+    exit(-1);
+   }
 }
 void MonMix::ouvrirMix8()
 {
@@ -347,7 +383,13 @@ void MonMix::ouvrirMix8()
 piste = i;
 monMixleger(piste);
 	}
-system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav mixed.wav && play mixed.wav");
+system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav mixed.wav");
+  if(!fork())
+   {
+    execlp("sox", "sox", "mixed.wav", "-d", NULL);
+    perror("Ceci ne devrait pas arriver.");
+    exit(-1);
+   }
 }
 void MonMix::ouvrirMix9()
 {
@@ -356,7 +398,13 @@ void MonMix::ouvrirMix9()
 piste = i;
 monMixleger(piste);
 	}
-system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav mixed.wav && play mixed.wav");
+system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav mixed.wav");
+  if(!fork())
+   {
+    execlp("sox", "sox", "mixed.wav", "-d", NULL);
+    perror("Ceci ne devrait pas arriver.");
+    exit(-1);
+   }
 }
 void MonMix::ouvrirMix10()
 {
@@ -365,7 +413,13 @@ void MonMix::ouvrirMix10()
 piste = i;
 monMixleger(piste);
 	}
-system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav mixed.wav && play mixed.wav");
+system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav mixed.wav");
+  if(!fork())
+   {
+    execlp("sox", "sox", "mixed.wav", "-d", NULL);
+    perror("Ceci ne devrait pas arriver.");
+    exit(-1);
+   }
 }
 void MonMix::ouvrirMix11()
 {
@@ -374,7 +428,13 @@ void MonMix::ouvrirMix11()
 piste = i;
 monMixleger(piste);
 	}
-system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav mixed.wav && play mixed.wav");
+system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav mixed.wav");
+  if(!fork())
+   {
+    execlp("sox", "sox", "mixed.wav", "-d", NULL);
+    perror("Ceci ne devrait pas arriver.");
+    exit(-1);
+   }
 }
 void MonMix::ouvrirMix12()
 {
@@ -383,7 +443,13 @@ void MonMix::ouvrirMix12()
 piste = i;
 monMixleger(piste);
 	}
-system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav mixed.wav && play mixed.wav");
+system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav mixed.wav");
+  if(!fork())
+   {
+    execlp("sox", "sox", "mixed.wav", "-d", NULL);
+    perror("Ceci ne devrait pas arriver.");
+    exit(-1);
+   }
 }
 void MonMix::ouvrirMix13()
 {
@@ -392,7 +458,13 @@ void MonMix::ouvrirMix13()
 piste = i;
 monMixleger(piste);
 	}
-system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav 13.wav mixed.wav && play mixed.wav");
+system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav 13.wav mixed.wav");
+  if(!fork())
+   {
+    execlp("sox", "sox", "mixed.wav", "-d", NULL);
+    perror("Ceci ne devrait pas arriver.");
+    exit(-1);
+   }
 }
 void MonMix::ouvrirMix14()
 {
@@ -401,7 +473,13 @@ void MonMix::ouvrirMix14()
 piste = i;
 monMixleger(piste);
 	}
-system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav 13.wav 14.wav mixed.wav && play mixed.wav");
+system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav 13.wav 14.wav mixed.wav");
+  if(!fork())
+   {
+    execlp("sox", "sox", "mixed.wav", "-d", NULL);
+    perror("Ceci ne devrait pas arriver.");
+    exit(-1);
+   }
 }
 void MonMix::ouvrirMix15()
 {
@@ -410,7 +488,13 @@ void MonMix::ouvrirMix15()
 piste = i;
 monMixleger(piste);
 	}
-system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav 13.wav 14.wav 15.wav mixed.wav && play mixed.wav");
+system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav 13.wav 14.wav 15.wav mixed.wav");
+  if(!fork())
+   {
+    execlp("sox", "sox", "mixed.wav", "-d", NULL);
+    perror("Ceci ne devrait pas arriver.");
+    exit(-1);
+   }
 }
 void MonMix::ouvrirMix16()
 {
@@ -419,5 +503,11 @@ void MonMix::ouvrirMix16()
 piste = i;
 monMixleger(piste);
 	}
-system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav 13.wav 14.wav 15.wav 16.wav mixed.wav && play mixed.wav");
+system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav 13.wav 14.wav 15.wav 16.wav mixed.wav");
+  if(!fork())
+   {
+    execlp("sox", "sox", "mixed.wav", "-d", NULL);
+    perror("Ceci ne devrait pas arriver.");
+    exit(-1);
+   }
 }
