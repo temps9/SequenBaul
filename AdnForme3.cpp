@@ -16,7 +16,7 @@ void genereFichierJo3(int piste,int quelpiano2,int quelpiano3,int quelpiano4,int
     int macombiendezonememoire;
 
 
-mesamplifront[0] = quelpiano2;
+mesamplifront[0] = quelpiano2; //octet 3
 mesamplifront[1] = quelpiano3;
 mesdurerfront[0] = quelpiano4;
 mesdurerfront[1] = quelpiano5;
@@ -24,7 +24,7 @@ mesvarampli[0] = quelpiano6;
 mesvarampli[1] = quelpiano7;
 mesvardurer[0] = quelpiano8;
 mesvardurer[1] = quelpiano9;
-madurer = quelpiano10;
+madurer = quelpiano10; //octet 11
 maforceh = quelpiano11;
 maforceb = quelpiano12;
 montremolo = quelpiano13;
@@ -62,6 +62,8 @@ macombiendezonememoire = quelpiano15;
          mesamplifront[1] += mesvarampli[1];
          montage3 += maforceplus;
          montage4 += maforceplus;
+         mesdurerfront[0] += mesvardurer[0];
+         mesdurerfront[1] += mesvardurer[1];
 
 	 // respect des limites
 	if(mesamplifront[0]>239)
