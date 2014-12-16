@@ -46,6 +46,9 @@ main.cpp \
     AdnForme39.cpp \
     AdnForme40.cpp \
     AdnForme41.cpp \
+    AdnForme42.cpp \    
+    AdnForme43.cpp \
+    AdnForme44.cpp \   
     pourleger.cpp
 
 HEADERS += \
@@ -93,4 +96,7 @@ HEADERS += \
     AdnForme39.h \
     AdnForme40.h \
     AdnForme41.h \
+    AdnForme42.h \
+    AdnForme43.h \
+    AdnForme44.h \
     pourleger.h
