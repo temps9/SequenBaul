@@ -43,11 +43,13 @@
 #include "AdnForme39.h"
 #include "AdnForme40.h"
 #include "AdnForme41.h"
+#include "AdnForme42.h"
+#include "AdnForme43.h"
+#include "AdnForme44.h"
 #include <stdio.h>
 #include <stdlib.h>
 
-void genereFichierJo(int piste);
-void monMixleger(int piste);
+void monmixleger(int piste);
 void conversionJoWav(int piste);
 
 #endif // _pourleger_h_
