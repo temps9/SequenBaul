@@ -274,7 +274,7 @@ void MonMix::ouvrirMix1()
 {
 ab_bouton->setEnabled(false);
 piste = 1;
-monMixleger(piste); 
+monmixleger(piste); 
   if(!fork())
    {
 //system("play 1.wav");
@@ -289,7 +289,7 @@ void MonMix::ouvrirMix2()
       for(int i=1; i<3; i++)
        {
 piste = i;
-monMixleger(piste);
+monmixleger(piste);
 	}    
 system("sox -m 1.wav 2.wav mixed.wav");
 
@@ -305,7 +305,7 @@ void MonMix::ouvrirMix3()
       for(int i=1; i<4; i++)
        {
 piste = i;
-monMixleger(piste);
+monmixleger(piste);
 	}
 system("sox -m 1.wav 2.wav 3.wav mixed.wav");
   if(!fork())
@@ -321,7 +321,7 @@ void MonMix::ouvrirMix4()
       for(int i=1; i<5; i++)
        {
 piste = i;
-monMixleger(piste);
+monmixleger(piste);
 	}
 system("sox -m 1.wav 2.wav 3.wav 4.wav mixed.wav");
   if(!fork())
@@ -336,7 +336,7 @@ void MonMix::ouvrirMix5()
       for(int i=1; i<6; i++)
        {
 piste = i;
-monMixleger(piste);
+monmixleger(piste);
 	}
 system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav mixed.wav");
   if(!fork())
@@ -351,7 +351,7 @@ void MonMix::ouvrirMix6()
       for(int i=1; i<7; i++)
        {
 piste = i;
-monMixleger(piste);
+monmixleger(piste);
 	}
 system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav mixed.wav");
   if(!fork())
@@ -366,7 +366,7 @@ void MonMix::ouvrirMix7()
       for(int i=1; i<8; i++)
        {
 piste = i;
-monMixleger(piste);
+monmixleger(piste);
 	}
 system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav mixed.wav");
   if(!fork())
@@ -381,7 +381,7 @@ void MonMix::ouvrirMix8()
       for(int i=1; i<9; i++)
        {
 piste = i;
-monMixleger(piste);
+monmixleger(piste);
 	}
 system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav mixed.wav");
   if(!fork())
@@ -396,7 +396,7 @@ void MonMix::ouvrirMix9()
       for(int i=1; i<10; i++)
        {
 piste = i;
-monMixleger(piste);
+monmixleger(piste);
 	}
 system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav mixed.wav");
   if(!fork())
@@ -411,7 +411,7 @@ void MonMix::ouvrirMix10()
       for(int i=1; i<11; i++)
        {
 piste = i;
-monMixleger(piste);
+monmixleger(piste);
 	}
 system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav mixed.wav");
   if(!fork())
@@ -426,7 +426,7 @@ void MonMix::ouvrirMix11()
       for(int i=1; i<12; i++)
        {
 piste = i;
-monMixleger(piste);
+monmixleger(piste);
 	}
 system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav mixed.wav");
   if(!fork())
@@ -441,7 +441,7 @@ void MonMix::ouvrirMix12()
       for(int i=1; i<13; i++)
        {
 piste = i;
-monMixleger(piste);
+monmixleger(piste);
 	}
 system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav mixed.wav");
   if(!fork())
@@ -456,7 +456,7 @@ void MonMix::ouvrirMix13()
       for(int i=1; i<14; i++)
        {
 piste = i;
-monMixleger(piste);
+monmixleger(piste);
 	}
 system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav 13.wav mixed.wav");
   if(!fork())
@@ -471,7 +471,7 @@ void MonMix::ouvrirMix14()
       for(int i=1; i<15; i++)
        {
 piste = i;
-monMixleger(piste);
+monmixleger(piste);
 	}
 system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav 13.wav 14.wav mixed.wav");
   if(!fork())
@@ -486,7 +486,7 @@ void MonMix::ouvrirMix15()
       for(int i=1; i<16; i++)
        {
 piste = i;
-monMixleger(piste);
+monmixleger(piste);
 	}
 system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav 13.wav 14.wav 15.wav mixed.wav");
   if(!fork())
@@ -501,7 +501,7 @@ void MonMix::ouvrirMix16()
       for(int i=1; i<17; i++)
        {
 piste = i;
-monMixleger(piste);
+monmixleger(piste);
 	}
 system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav 13.wav 14.wav 15.wav 16.wav mixed.wav");
   if(!fork())
