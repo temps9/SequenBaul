@@ -157,7 +157,6 @@ MonMix::MonMix() : QWidget()
     cf_bouton->setGeometry(500, 720, 300, 30);
 
 
-
     QObject::connect(ba_bouton, SIGNAL(clicked()), this, SLOT(ouvrirCompose1()));
     QObject::connect(bb_bouton, SIGNAL(clicked()), this, SLOT(ouvrirCompose2()));
     QObject::connect(bc_bouton, SIGNAL(clicked()), this, SLOT(ouvrirCompose3()));
@@ -202,118 +201,147 @@ MonMix::MonMix() : QWidget()
 
 void MonMix::ouvrirCompose1()
 {
-system("xdg-open piste1.txt");
+int poursys1;   
+poursys1 = system("xdg-open piste1.txt");
+if ( WEXITSTATUS(poursys1) != 0 )
+    exit(-1); 
 }
 void MonMix::ouvrirCompose2()
 {
-system("xdg-open piste2.txt");
+int poursys2;   
+poursys2 = system("xdg-open piste2.txt");
+if ( WEXITSTATUS(poursys2) != 0 )
+    exit(-1); 
 }
 void MonMix::ouvrirCompose3()
 {
-system("xdg-open piste3.txt");
+int poursys3;   
+poursys3 = system("xdg-open piste3.txt");
+if ( WEXITSTATUS(poursys3) != 0 )
+    exit(-1); 
 }
 void MonMix::ouvrirCompose4()
 {
-system("xdg-open piste4.txt");
+int poursys4;   
+poursys4 = system("xdg-open piste4.txt");
+if ( WEXITSTATUS(poursys4) != 0 )
+    exit(-1);  
 }
 void MonMix::ouvrirCompose5()
 {
-system("xdg-open piste5.txt");
+int poursys5;   
+poursys5 = system("xdg-open piste5.txt");
+if ( WEXITSTATUS(poursys5) != 0 )
+    exit(-1);  
 }
 void MonMix::ouvrirCompose6()
 {
-system("xdg-open piste6.txt");
+int poursys6;   
+poursys6 = system("xdg-open piste6.txt");
+if ( WEXITSTATUS(poursys6) != 0 )
+    exit(-1);  
 }
 void MonMix::ouvrirCompose7()
 {
-system("xdg-open piste7.txt");
+int poursys7;   
+poursys7 = system("xdg-open piste7.txt");
+if ( WEXITSTATUS(poursys7) != 0 )
+    exit(-1); 
 }
 void MonMix::ouvrirCompose8()
 {
-system("xdg-open piste8.txt");
+int poursys8;   
+poursys8 = system("xdg-open piste8.txt");
+if ( WEXITSTATUS(poursys8) != 0 )
+    exit(-1); 
 }
 void MonMix::ouvrirCompose9()
 {
-system("xdg-open piste9.txt");
+int poursys9;   
+poursys9 = system("xdg-open piste9.txt");
+if ( WEXITSTATUS(poursys9) != 0 )
+    exit(-1); 
 }
 void MonMix::ouvrirCompose10()
 {
-system("xdg-open piste10.txt");
+int poursys10;   
+poursys10 = system("xdg-open piste10.txt");
+if ( WEXITSTATUS(poursys10) != 0 )
+    exit(-1);  
 }
 void MonMix::ouvrirCompose11()
 {
-system("xdg-open piste11.txt");
+int poursys11;   
+poursys11 = system("xdg-open piste11.txt");
+if ( WEXITSTATUS(poursys11) != 0 )
+    exit(-1); 
 }
 void MonMix::ouvrirCompose12()
 {
-system("xdg-open piste12.txt");
+int poursys12;   
+poursys12 = system("xdg-open piste12.txt");
+if ( WEXITSTATUS(poursys12) != 0 )
+    exit(-1);  
 }
 void MonMix::ouvrirCompose13()
 {
-system("xdg-open piste13.txt");
+int poursys13;   
+poursys13 = system("xdg-open piste13.txt");
+if ( WEXITSTATUS(poursys13) != 0 )
+    exit(-1); 
 }
 void MonMix::ouvrirCompose14()
 {
-system("xdg-open piste14.txt");
+int poursys14;   
+poursys14 = system("xdg-open piste14.txt");
+if ( WEXITSTATUS(poursys14) != 0 )
+    exit(-1); 
 }
 void MonMix::ouvrirCompose15()
 {
-system("xdg-open piste15.txt");
+int poursys15;   
+poursys15 = system("xdg-open piste15.txt");
+if ( WEXITSTATUS(poursys15) != 0 )
+    exit(-1); 
 }
 void MonMix::ouvrirCompose16()
 {
-system("xdg-open piste16.txt");
+int poursys16;   
+poursys16 = system("xdg-open piste16.txt");
+if ( WEXITSTATUS(poursys16) != 0 )
+    exit(-1); 
 }
 
 void MonMix::effaceMix16()
 {
-system("rm *.jo");
+int poursys17;   
+poursys17 = system("rm *.jo");
+if ( WEXITSTATUS(poursys17) != 0 )
+printf("%d",1);
 }
 
 void MonMix::ouvrirMix1()
 {
 ab_bouton->setEnabled(false);
 piste = 1;
-monmixleger(piste); 
-  if(!fork())
+basemonmixleger(piste);
+ /* if(!fork())
    {
 //system("play 1.wav");
     execlp("sox", "sox", "1.wav", "-d", NULL);
     perror("Ceci ne devrait pas arriver.");
     exit(-1);
    }
+*/
 ab_bouton->setEnabled(true);
 }
 void MonMix::ouvrirMix2()
 {
-      for(int i=1; i<3; i++)
-       {
-piste = i;
-monmixleger(piste);
-	}    
-system("sox -m 1.wav 2.wav mixed.wav");
-
-  if(!fork())
-   {
-    execlp("sox", "sox", "mixed.wav", "-d", NULL);
-    perror("Ceci ne devrait pas arriver.");
-    exit(-1);
-   }
+monmixleger1();
 }
 void MonMix::ouvrirMix3()
 {
-      for(int i=1; i<4; i++)
-       {
-piste = i;
-monmixleger(piste);
-	}
-system("sox -m 1.wav 2.wav 3.wav mixed.wav");
-  if(!fork())
-   {
-    execlp("sox", "sox", "mixed.wav", "-d", NULL);
-    perror("Ceci ne devrait pas arriver.");
-    exit(-1);
-   }
+monmixleger2();
 }
 
 void MonMix::ouvrirMix4()
@@ -323,12 +351,19 @@ void MonMix::ouvrirMix4()
 piste = i;
 monmixleger(piste);
 	}
-system("sox -m 1.wav 2.wav 3.wav 4.wav mixed.wav");
+int poursys20;   
+poursys20 = system("sox -m 1.wav 2.wav 3.wav 4.wav mixed.wav");
+if ( WEXITSTATUS(poursys20) != 0 )
+    exit(-1); 
+
+else
+   {
   if(!fork())
    {
     execlp("sox", "sox", "mixed.wav", "-d", NULL);
     perror("Ceci ne devrait pas arriver.");
     exit(-1);
+   }
    }
 }
 void MonMix::ouvrirMix5()
@@ -338,12 +373,19 @@ void MonMix::ouvrirMix5()
 piste = i;
 monmixleger(piste);
 	}
-system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav mixed.wav");
+int poursys21;   
+poursys21 = system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav mixed.wav");
+if ( WEXITSTATUS(poursys21) != 0 )
+printf("%d",1);
+
+else
+   {
   if(!fork())
    {
     execlp("sox", "sox", "mixed.wav", "-d", NULL);
     perror("Ceci ne devrait pas arriver.");
     exit(-1);
+   }
    }
 }
 void MonMix::ouvrirMix6()
@@ -353,12 +395,19 @@ void MonMix::ouvrirMix6()
 piste = i;
 monmixleger(piste);
 	}
-system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav mixed.wav");
+int poursys22;   
+poursys22 = system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav mixed.wav");
+if ( WEXITSTATUS(poursys22) != 0 )
+printf("%d",1);
+
+else
+   {
   if(!fork())
    {
     execlp("sox", "sox", "mixed.wav", "-d", NULL);
     perror("Ceci ne devrait pas arriver.");
     exit(-1);
+   }
    }
 }
 void MonMix::ouvrirMix7()
@@ -368,12 +417,19 @@ void MonMix::ouvrirMix7()
 piste = i;
 monmixleger(piste);
 	}
-system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav mixed.wav");
+int poursys23;   
+poursys23 = system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav mixed.wav");
+if ( WEXITSTATUS(poursys23) != 0 )
+printf("%d",1);
+
+else
+   {
   if(!fork())
    {
     execlp("sox", "sox", "mixed.wav", "-d", NULL);
     perror("Ceci ne devrait pas arriver.");
     exit(-1);
+   }
    }
 }
 void MonMix::ouvrirMix8()
@@ -383,12 +439,19 @@ void MonMix::ouvrirMix8()
 piste = i;
 monmixleger(piste);
 	}
-system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav mixed.wav");
+int poursys24;   
+poursys24 = system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav mixed.wav");
+if ( WEXITSTATUS(poursys24) != 0 )
+printf("%d",1);
+
+else
+   {
   if(!fork())
    {
     execlp("sox", "sox", "mixed.wav", "-d", NULL);
     perror("Ceci ne devrait pas arriver.");
     exit(-1);
+   }
    }
 }
 void MonMix::ouvrirMix9()
@@ -398,12 +461,19 @@ void MonMix::ouvrirMix9()
 piste = i;
 monmixleger(piste);
 	}
-system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav mixed.wav");
+int poursys25;   
+poursys25 = system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav mixed.wav");
+if ( WEXITSTATUS(poursys25) != 0 )
+printf("%d",1);
+
+else
+   {
   if(!fork())
    {
     execlp("sox", "sox", "mixed.wav", "-d", NULL);
     perror("Ceci ne devrait pas arriver.");
     exit(-1);
+   }
    }
 }
 void MonMix::ouvrirMix10()
@@ -413,12 +483,19 @@ void MonMix::ouvrirMix10()
 piste = i;
 monmixleger(piste);
 	}
-system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav mixed.wav");
+int poursys26;   
+poursys26 = system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav mixed.wav");
+if ( WEXITSTATUS(poursys26) != 0 )
+printf("%d",1);
+
+else
+   {
   if(!fork())
    {
     execlp("sox", "sox", "mixed.wav", "-d", NULL);
     perror("Ceci ne devrait pas arriver.");
     exit(-1);
+   }
    }
 }
 void MonMix::ouvrirMix11()
@@ -428,12 +505,19 @@ void MonMix::ouvrirMix11()
 piste = i;
 monmixleger(piste);
 	}
-system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav mixed.wav");
+int poursys27;   
+poursys27 = system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav mixed.wav");
+if ( WEXITSTATUS(poursys27) != 0 )
+printf("%d",1);
+
+else
+   {
   if(!fork())
    {
     execlp("sox", "sox", "mixed.wav", "-d", NULL);
     perror("Ceci ne devrait pas arriver.");
     exit(-1);
+   }
    }
 }
 void MonMix::ouvrirMix12()
@@ -443,12 +527,19 @@ void MonMix::ouvrirMix12()
 piste = i;
 monmixleger(piste);
 	}
-system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav mixed.wav");
+int poursys28;   
+poursys28 = system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav mixed.wav");
+if ( WEXITSTATUS(poursys28) != 0 )
+printf("%d",1);
+
+else
+   {
   if(!fork())
    {
     execlp("sox", "sox", "mixed.wav", "-d", NULL);
     perror("Ceci ne devrait pas arriver.");
     exit(-1);
+   }
    }
 }
 void MonMix::ouvrirMix13()
@@ -458,12 +549,19 @@ void MonMix::ouvrirMix13()
 piste = i;
 monmixleger(piste);
 	}
-system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav 13.wav mixed.wav");
+int poursys29;   
+poursys29 = system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav 13.wav mixed.wav");
+if ( WEXITSTATUS(poursys29) != 0 )
+printf("%d",1);
+
+else
+   {
   if(!fork())
    {
     execlp("sox", "sox", "mixed.wav", "-d", NULL);
     perror("Ceci ne devrait pas arriver.");
     exit(-1);
+   }
    }
 }
 void MonMix::ouvrirMix14()
@@ -473,12 +571,19 @@ void MonMix::ouvrirMix14()
 piste = i;
 monmixleger(piste);
 	}
-system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav 13.wav 14.wav mixed.wav");
+int poursys30;   
+poursys30 = system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav 13.wav 14.wav mixed.wav");
+if ( WEXITSTATUS(poursys30) != 0 )
+printf("%d",1);
+
+else
+   {
   if(!fork())
    {
     execlp("sox", "sox", "mixed.wav", "-d", NULL);
     perror("Ceci ne devrait pas arriver.");
     exit(-1);
+   }
    }
 }
 void MonMix::ouvrirMix15()
@@ -488,12 +593,19 @@ void MonMix::ouvrirMix15()
 piste = i;
 monmixleger(piste);
 	}
-system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav 13.wav 14.wav 15.wav mixed.wav");
+int poursys31;   
+poursys31 = system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav 13.wav 14.wav 15.wav mixed.wav");
+if ( WEXITSTATUS(poursys31) != 0 )
+printf("%d",1);
+
+else
+   {
   if(!fork())
    {
     execlp("sox", "sox", "mixed.wav", "-d", NULL);
     perror("Ceci ne devrait pas arriver.");
     exit(-1);
+   }
    }
 }
 void MonMix::ouvrirMix16()
@@ -503,11 +615,37 @@ void MonMix::ouvrirMix16()
 piste = i;
 monmixleger(piste);
 	}
-system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav 13.wav 14.wav 15.wav 16.wav mixed.wav");
+int poursys32;   
+poursys32 = system("sox -m 1.wav 2.wav 3.wav 4.wav 5.wav 6.wav 7.wav 8.wav 9.wav 10.wav 11.wav 12.wav 13.wav 14.wav 15.wav 16.wav mixed.wav");
+if ( WEXITSTATUS(poursys32) != 0 )
+printf("%d",1);
+
+else
+   {
   if(!fork())
    {
     execlp("sox", "sox", "mixed.wav", "-d", NULL);
     perror("Ceci ne devrait pas arriver.");
     exit(-1);
    }
+   }
 }
+
+/*
+void MonMix::lecteur1()
+   {
+
+int poursys18;   
+poursys18 = system("sox -m 1.wav 2.wav mixed.wav");
+if ( WEXITSTATUS(poursys18) != 0 )
+    exit(-1); 
+
+else
+   {
+
+
+    execlp("sox", "sox", "mixed.wav", "-d", NULL);
+
+   }
+}
+*/
