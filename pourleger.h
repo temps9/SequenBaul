@@ -46,10 +46,38 @@
 #include "AdnForme42.h"
 #include "AdnForme43.h"
 #include "AdnForme44.h"
+#include "AdnForme45.h"
+#include "AdnForme46.h"
+#include "AdnForme47.h"
+#include "AdnForme48.h"
+#include "AdnForme49.h"
+#include "AdnForme50.h"
+#include "AdnForme51.h"
+#include "AdnForme52.h"
+#include "AdnForme53.h"
+#include "AdnForme54.h"
+#include "AdnForme55.h"
+#include "AdnForme56.h"
+#include "AdnForme57.h"
+#include "AdnForme58.h"
+#include "AdnForme59.h"
+#include "AdnForme60.h"
+#include "AdnForme61.h"
+#include "AdnForme62.h"
+#include "AdnForme63.h"
+#include "AdnForme64.h"
+#include "AdnForme65.h"
+#include "AdnForme66.h"
+#include "AdnForme67.h"
+#include "AdnForme68.h"
+#include "AdnForme69.h"
+#include "AdnForme70.h"
+#include "AdnForme71.h"
+#include "AdnForme72.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 void monmixleger(int piste);
-void conversionJoWav(int piste);
+int conversionJoWav(int piste);
 
 #endif // _pourleger_h_
