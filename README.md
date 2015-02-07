@@ -11,7 +11,7 @@ Si vous pensez que les sciences doivent suivre les règles d'une religion et aba
 Le principe du code :
 
 Origine :
-Considérons qu'il fut un temps ou la modélisation avait construit le langage, mais que selon la région de Gaule ou est née cette technique, le langage était adapté aux différents environnements. De cette technique de les alchimistes conservèrent quelques souvenirs et plus près de nous les découvreurs du siècles des lumières énoncèrent quelques principes qui ne furent pas vraiment compris car les langages modernes ne s'y prête guère. Ce qui reste de ce langage se trouve dans les US et Coutumes de plusieurs lieux, ou en exemple le pécheur partage sa pèche considérant que si il y a du poisson, c'est grâce à tous.
+Considérons qu'il fut un temps ou la modélisation avait construit le langage, mais que selon la région de Gaule ou est née cette technique, le langage était adapté aux différents environnements. De cette technique les alchimistes conservèrent quelques souvenirs et plus près de nous les découvreurs du siècles des lumières énoncèrent quelques principes qui ne furent pas vraiment compris car les langages modernes ne s'y prête guère. Ce qui reste de ce langage se trouve dans les US et Coutumes de plusieurs lieux, ou en exemple le pécheur partage sa pèche considérant que si il y a du poisson, c'est grâce à tous.
 
 
 En appliqué cela donne dans le code.
