@@ -4,6 +4,9 @@ SOURCES += \
 main.cpp \
     MonMix.cpp \
     convertisseur.cpp \
+    convertisseur1.cpp \
+    convertisseur2.cpp \
+    baseconvertisseur.cpp \
     AdnForme.cpp \
     AdnForme1.cpp \
     AdnForme2.cpp \
@@ -49,11 +52,46 @@ main.cpp \
     AdnForme42.cpp \    
     AdnForme43.cpp \
     AdnForme44.cpp \   
-    pourleger.cpp
+    AdnForme45.cpp \
+    AdnForme46.cpp \   
+    AdnForme47.cpp \
+    AdnForme48.cpp \
+    AdnForme49.cpp \   
+    AdnForme50.cpp \ 
+    AdnForme51.cpp \
+    AdnForme52.cpp \   
+    AdnForme53.cpp \
+    AdnForme54.cpp \
+    AdnForme55.cpp \
+    AdnForme56.cpp \
+    AdnForme57.cpp \
+    AdnForme58.cpp \
+    AdnForme59.cpp \
+    AdnForme60.cpp \
+    AdnForme61.cpp \
+    AdnForme62.cpp \
+    AdnForme63.cpp \
+    AdnForme64.cpp \
+    AdnForme65.cpp \
+    AdnForme66.cpp \
+    AdnForme67.cpp \
+    AdnForme68.cpp \
+    AdnForme69.cpp \
+    AdnForme70.cpp \
+    AdnForme71.cpp \
+    AdnForme72.cpp \
+    consonnes.cpp \
+    pourleger.cpp \
+    basepourleger.cpp \
+    pourleger1.cpp \
+    pourleger2.cpp 
 
 HEADERS += \
     MonMix.h \
     convertisseur.h \
+    convertisseur1.h \
+    convertisseur2.h \
+    baseconvertisseur.h \
     AdnForme.h \
     AdnForme1.h \
     AdnForme2.h \
@@ -99,4 +137,36 @@ HEADERS += \
     AdnForme42.h \
     AdnForme43.h \
     AdnForme44.h \
-    pourleger.h
+    AdnForme45.h \
+    AdnForme46.h \
+    AdnForme47.h \
+    AdnForme48.h \
+    AdnForme49.h \
+    AdnForme50.h \
+    AdnForme51.h \
+    AdnForme52.h \
+    AdnForme53.h \
+    AdnForme54.h \
+    AdnForme55.h \
+    AdnForme56.h \
+    AdnForme57.h \
+    AdnForme58.h \
+    AdnForme59.h \
+    AdnForme60.h \
+    AdnForme61.h \
+    AdnForme62.h \
+    AdnForme63.h \
+    AdnForme64.h \
+    AdnForme65.h \
+    AdnForme66.h \
+    AdnForme67.h \
+    AdnForme68.h \
+    AdnForme69.h \
+    AdnForme70.h \
+    AdnForme71.h \
+    AdnForme72.h \
+    consonnes.h \
+    pourleger.h  \
+    basepourleger.h  \
+    pourleger1.h \
+    pourleger2.h 
