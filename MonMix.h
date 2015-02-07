@@ -10,8 +10,12 @@
 #include <signal.h>
 #include <unistd.h>
 #include "convertisseur.h"
+#include "convertisseur1.h"
 #include "AdnForme.h"
 #include "pourleger.h"
+#include "pourleger1.h"
+#include "pourleger2.h"
+#include "basepourleger.h"
 /*#include "AdnForme1.h"
 #include "AdnForme2.h"
 #include "AdnForme3.h"
