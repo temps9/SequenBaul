@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
    donne = fopen (donne1, "w+");
     if (donne != NULL)
     {
-          fprintf(donne, "%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d \n", 41, 1, 133, 130, 50, 50, 12, 12, 0, 0, 1, 7, 50, 5, 10, 2);
+          fprintf(donne, "%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d \n%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d", 65, 1, 1, 100, 1, 100, 1, 200, 10, 1, 1, 0, 0, 100, 100, 128, 65, 1, 1, 100, 1, 100, 1, 200, 10, 1, 1, 0, 0, 100, 100, 128);
         fclose(donne);
     }
         }
